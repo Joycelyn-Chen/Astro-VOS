@@ -46,3 +46,14 @@ Please cite our paper if you find this repo useful!
 ```bibtex
 
 ```
+
+and the reference model:
+
+```bibtex
+@inproceedings{cheng2022xmem,
+  title={{XMem}: Long-Term Video Object Segmentation with an Atkinson-Shiffrin Memory Model},
+  author={Cheng, Ho Kei and Alexander G. Schwing},
+  booktitle={ECCV},
+  year={2022}
+}
+```
