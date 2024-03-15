@@ -175,4 +175,4 @@ cython_debug/
 */*.png
 */*/*.jpg
 */*/*.png
-
+!./docs/teaser.png

@@ -48,9 +48,15 @@ Long-Time Video (3X) (note that `mem_every`, aka `r`, is set differently):
 python eval.py --output ../output/lv3 --dataset LV3 --mem_every 10
 ```
 
+MHD-VOS validation: 
+
+```
+`python eval.py --output ../Evaluation/output/<output_name> --dataset A --astro_path <dataset_path> --size -1 --model ./saves/<>.pth`
+```
+
 ## Getting quantitative results
 
-We do not provide any tools for getting quantitative results here. We used the followings to get the results reported in the paper:
+The XMem team do not provide any tools for getting quantitative results here. The XMem team used the followings to get the results reported in the paper:
 
 - DAVIS 2017 validation: [davis2017-evaluation](https://github.com/davisvideochallenge/davis2017-evaluation)
 - DAVIS 2016 validation: [davis2016-evaluation](https://github.com/hkchengrex/davis2016-evaluation) (Unofficial)
@@ -61,7 +67,9 @@ We do not provide any tools for getting quantitative results here. We used the f
 
 (For the Long-Time Video dataset, point `--davis_path` to either `long_video_davis` or `long_video_davis_x3`)
 
-You can also use my own script which evaluates much faster and produces identical results: [vos-benchmark](https://github.com/hkchengrex/vos-benchmark).
+You can also use the script the XMem team developed which evaluates much faster and produces identical results: [vos-benchmark](https://github.com/hkchengrex/vos-benchmark).
+And use my script to evaluate the custom MHD-VOS dataset: [astro-evaluation](https://github.com/Joycelyn-Chen/astro-evaluation) 
+
 
 ## On custom data
 
@@ -82,13 +90,13 @@ Structure your custom data like this:
 │   │   └── ...
 ```
 
-We use `sort` to determine frame order. The annotations do not have have to be complete (e.g., first-frame only is fine). We use PIL to read the annotations and `np.unique` to determine objects. PNG palette will be used automatically if exists.
+The XMem team use `sort` to determine frame order. The annotations do not have have to be complete (e.g., first-frame only is fine). The XMem team use PIL to read the annotations and `np.unique` to determine objects. PNG palette will be used automatically if exists.
 
 Then, point `--generic_path` to `custom_data_root` and specify `--dataset` as `G` (for generic).
 
 ## Multi-scale evaluation
 
-Multi-scale evaluation is done in two steps. We first compute and save the object probabilities maps for different settings independently on hard-disks as `hkl` (hickle) files. Then, these maps are merged together with `merge_multi_score.py`.
+Multi-scale evaluation is done in two steps. The XMem team first compute and save the object probabilities maps for different settings independently on hard-disks as `hkl` (hickle) files. Then, these maps are merged together with `merge_multi_score.py`.
 
 Example for DAVIS 2017 validation MS:
 
