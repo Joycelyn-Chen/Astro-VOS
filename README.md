@@ -16,7 +16,7 @@
 ### Introduction
 Understanding the influence of supernovae on the interstellar medium (ISM) is crutial for unraveling the complexities of our Galaxy. Traditional methods, however, are inadequate in accurately capturing the three-dimensional structures of superbubbles formed by supernovae, thus constraining detailed quantitative analysis. To bridge this gap, we utilize 3D magnetohydrodynamic numerical simulations to construct a tailored dataset. Moreover, we develop a video object segmentation model to precisely depict the contours of superbubbles within our 3D dataset, offering an in-depth view of superbubble evolution. Our findings, verified against the principles of Sedov-Taylor theories, highlight the effectiveness of our innovative approach in delivering accurate and comprehensive insights into the ISM dynamics, significantly outperforming traditional astrophysical methods.
 
-![Teaser figure](imgs/teaser.png?raw=true)
+![Teaser figure](docs/teaser.png?raw=true)
 
 ### Training/inference
 
